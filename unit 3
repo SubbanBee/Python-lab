@@ -1,0 +1,85 @@
+UNIT – 3 
+Experiment 3.1: 
+Aim: Write a NumPy program using methods — info, add, array, all, greater, greater_equal, 
+less, less_equal, equal, allclose, zeros, ones, linspace, tolist.  
+Descrip on:  
+This program demonstrates mul ple NumPy methods for array crea on, element-wise 
+comparison, checking condi ons, and conver ng arrays to lists.  
+Procedure:  
+1. Start the program.  
+2. Import numpy as np.  
+3. Use np.add() for addi on of arrays.  
+4. Use np.all() to check if all elements sa sfy a condi on.  
+5. Use np.greater(), np.greater_equal(), np.less(), np.less_equal(), np.equal(), np.allclose() for 
+element-wise comparisons.  
+6. Create arrays using np.array(), np.zeros(), np.ones(), np.linspace(). 
+7. Convert arrays to list using .tolist().  
+8. Display results.  
+9. End the program.  
+Source Code:  
+import numpy as np  
+a=np.array([1,2,3])  
+b=np.array([4,5,6]) 
+print("Add:",np.add(a,b))  
+print("All non-zero:",np.all(a))  
+print("Greater:",np.greater(b,a))  
+print("Greater equal:",np.greater_equal(b,a))  
+print("Less:",np.less(a,b))  
+print("Less equal:",np.less_equal(a,b))  
+print("Equal:",np.equal(a,b))  
+print("All close:",np.allclose(a,[1,2,3]))  
+print("Zeros:",np.zeros(3))  
+print("Ones:",np.ones(3))  
+print("Linspace:",np.linspace(0,1,5))  
+print("To list:",a.tolist())  
+Input and Output:  
+Input: None  
+Output:  
+Add: [5 7 9]  
+All non-zero: True  
+Greater: [ True True True]  
+Greater equal: [ True True True]  
+Less: [ True True True]  
+Less equal: [ True True True]  
+Equal: [False False False]  
+All close: True  
+Zeros: [0. 0. 0.]  
+Ones: [1. 1. 1.]  
+Linspace: [0. 0.25 0.5 0.75 1. ]  
+To list: [1,2,3]  
+Result: Demonstrates all listed NumPy methods successfully. 
+Experiment 3.2: 
+Aim: Write a NumPy program using NumPy methods — max, min, argmax, argmin, repr, count, 
+bincount, unique.  
+Descrip on:  
+This program demonstrates how to find maximum, minimum, their indices, count 
+occurrences, and get unique elements from arrays using NumPy.  
+Procedure:  
+1. Start the program.  
+2. Import numpy as np.  
+3. Create a NumPy array.  
+4. Use np.max(), np.min() to find maximum and minimum.  
+5. Use np.argmax(), np.argmin() to find indices of max and min.  
+6. Use np.unique() to get unique elements.  
+7. Use np.bincount() to count occurrences of integers.  
+8. Display results.  
+9. End the program.  
+Source Code:  
+import numpy as np  
+arr=np.array([1,3,2,3,4,2,1,5])  
+print("Max:",np.max(arr))  
+print("Min:",np.min(arr))  
+print("Argmax:",np.argmax(arr))  
+print("Argmin:",np.argmin(arr))  
+print("Unique:",np.unique(arr))  
+print("Bincount:",np.bincount(arr))  
+Input and Output:  
+Input: None  
+Output:  
+Max: 5  
+Min: 1  
+Argmax:  
+7 Argmin: 0  
+Unique: [1 2 3 4 5]  
+Bincount: [0 2 2 2 1 1]  
+Result: Program demonstrates array sta s cs, coun ng, and unique elements using NumPy.
