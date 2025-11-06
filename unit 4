@@ -1,0 +1,198 @@
+UNIT – 4 
+Experiment 4.1: 
+i)Aim: Write a Pandas program to create and display a one-dimensional array-like object 
+containing an array of data using Pandas module.  
+Descrip on:  
+This program demonstrates how to create a one-dimensional Pandas Series from a list of data 
+and display it.  
+Procedure:  
+1. Start the program.  
+2. Import Pandas as pd.  
+3. Define a list of data.  
+4. Use pd.Series() to create a Series.  
+5. Print the Series.  
+6. End the program.  
+Source Code:  
+import pandas as pd  
+data = [10,20,30,40,50]  
+series = pd.Series(data)  
+print(series)  
+Input and Output:  
+Input: None  
+Output:  
+0 10  
+1 20  
+2 30  
+3 40  
+4 50  
+dtype: int64  
+Result: A one-dimensional Pandas Series is created and displayed correctly. 
+Expeiment 4.1: 
+ii)Aim: Write a Pandas program to convert a Pandas Series to Python list and its type.  
+Descrip on:  
+Converts a Series into a Python list using .tolist() method and checks the type of the resul ng 
+object.  
+Procedure:  
+1. Start the program.  
+2. Create a Pandas Series.  
+3. Convert the Series to a list using .tolist().  
+4. Print the list and its type.  
+5. End the program.  
+Source Code:  
+import pandas as pd  
+data = [10,20,30,40,50]  
+series = pd.Series(data)  
+list_data = series.tolist()  
+print(list_data)  
+print(type(list_data))  
+Input and Output:  
+Input: None  
+Output: 
+[10,20,30,40,50]  
+<class ‘list’> 
+Result: Series is successfully converted into a Python list. 
+Experiment 4.2: 
+i)Aim: Write a Pandas program to create and display a DataFrame from a specified dic onary 
+data which has the index labels.  
+Descrip on:  
+Demonstrates crea ng a Pandas DataFrame from a dic onary and assigning custom row 
+labels.  
+Procedure:  
+1. Start the program.  
+2. Import Pandas as pd and NumPy as np.  
+3. Define dic onary exam_data and list labels.  
+4. Use pd.DataFrame(data, index=labels) to create DataFrame.  
+5. Print the DataFrame.  
+6. End the program.  
+Source Code:  
+import pandas as pd  
+import numpy as np  
+exam_data 
+= 
+{'name': 
+hew','Laura','Kevin','Jonas'],  
+['Anastasia','Dima','Katherine','James','Emily','Michael','Ma 
+'score':[12.5,9,16.5,np.nan,9,20,14.5,np.nan,8,19],  
+'a empts':[1,3,2,3,2,3,1,1,2,1],  
+'qualify':['yes','no','yes','no','no','yes','yes','no','no','yes']}  
+labels = ['a','b','c','d','e','f','g','h','i','j']  
+df = pd.DataFrame(exam_data,index=labels)  
+print(df)  
+Input and Output:  
+Input: None  
+Output:  
+name  score  a empts quality 
+a  Anastasia   12.5         
+b       
+Dima    9.0         
+c  Katherine   16.5         
+1     yes 
+3         
+no 
+2     yes 
+d      James    NaN         3      no 
+e      Emily    9.0         2      no 
+f    
+Michael   20.0         
+g    Malthew   14.5         
+3     yes 
+1     yes 
+h      Laura    NaN         1      no 
+i      
+j      
+Kevin    8.0         
+Jonas   19.0         
+2      no 
+1     yes 
+Result: DataFrame is created with specified dic onary data and index labels. 
+Experiment 4.2: 
+ii)Aim: Write a Pandas program to change the name 'James' to 'Suresh' in name column of the 
+DataFrame.  
+Descrip on:  
+Replaces the value 'James' with 'Suresh' in the name column using boolean indexing.  
+Procedure:  
+1. Start program.  
+2. Create DataFrame as before.  
+3. Use df['name'].replace('James','Suresh', inplace=True) to update value.  
+4. Print updated DataFrame.  
+5. End program.  
+Source Code:  
+import pandas as pd 
+data = { 
+'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily'], 
+'score': [12.5, 9, 16.5, 15, 9], 
+'a empts': [1, 3, 2, 3, 2] 
+} 
+df = pd.DataFrame(data) 
+df['name'] = df['name'].replace('James', 'Suresh') 
+print("Updated DataFrame:") 
+print(df) 
+Input and Output:  
+Input: None  
+Output:  
+Updated DataFrame: 
+name  score  a empts qualify 
+0  Anastasia   12.5         
+1       
+Dima    9.0         
+2  Katherine   16.5         
+3     Suresh   15.0         
+1     yes 
+3      no 
+2     yes 
+3      no 
+4      Emily    9.0         2      no5    Michael   20.0         3     yes 
+6    Malthew   14.5         
+7      Laura   16.0         
+2     yes 
+1      no 
+8      Kevin    8.0         2      no 
+9      Jonas    9.0         1     yes 
+Result:  
+Name 'James' is successfully updated to 'Suresh'. 
+Experiment 4.2: 
+iii) Aim: Write a Pandas program to insert a new column in exis ng DataFrame.  
+Descrip on:  
+Adds a new column grade to the exis ng DataFrame and assigns values.  
+Procedure:  
+1. Start program.  
+2. Create DataFrame.  
+3. Insert new column grade using df[city] = [...].  
+4. Print updated DataFrame.  
+5. End program.  
+Source Code:  
+import pandas as pd 
+data = { 
+'Name': ['Alice', 'Bob', 'Charlie'], 
+'Age': [25, 30, 35] 
+} 
+df = pd.DataFrame(data) 
+df['City'] = ['New York', 'Los Angeles', 'Chicago'] 
+print("Updated DataFrame with new column:") 
+print(df) 
+Input and Output: 
+Input: None 
+Output: 
+Updated DataFrame with new column: 
+Name  Age         
+City 
+0    Alice   25     New York 
+1      Bob   30  Los Angeles 
+2  Charlie   35      Chicago 
+Result: New column added successfully. 
+Experiment 4.2: 
+iv) Aim: Write a Pandas program to get list from DataFrame column headers.  
+Descrip on: Retrieves column headers of a DataFrame using df.columns and converts to a list.  
+Procedure:  
+1. Start program.  
+2. Create DataFrame.  
+3. Use list(df.columns) to get column headers.  
+4. Print list.  
+5. End program.  
+Source Code:  
+columns_list = list(df.columns)  
+print(columns_list)  
+Input and Output:  
+Input: None  
+Output: ['name','score','a empts','qualify','grade']  
+Result: Column headers successfully converted to a list.
