@@ -1,0 +1,99 @@
+UNIT - 1 
+Experiment 1.1: 
+Aim: Write a program that asks the user for a weight in kilograms and converts it to pounds. 
+Descrip on: This program converts a weight given in kilograms to pounds using the 
+conversion factor 1 kg = 2.2 pounds.  
+Procedure:  
+1. Start the program.  
+2. Prompt the user to enter weight in kilograms.  
+3. Read and store input as float.  
+4. Mul ply weight by 2.2.  
+5. Display the result.  
+6. End the program.  
+Source Code:  
+kg = float(input("Enter weight in kilograms: "))  
+pounds = kg * 2.2 print("kg:", kg, "is equal to pounds:", pounds) 
+Input and Output:  
+Input: 2.55  
+Output: kg: 2.55 is equal to pounds: 5.61 
+Result: The program correctly converts kilograms to pounds. 
+Experiment 1.2: 
+Aim: Write a program that uses a for loop to print the numbers 8, 11, 14, 17, 20, ..., 89.  
+Descrip on: Generates numbers from 8 to 89 with a step of 3 using a for loop and range(). 
+Procedure:  
+1. Start the program.  
+2. Use for num in range(8,90,3) to generate numbers.  
+3. Print each number separated by a comma.  
+4. End the program.  
+Source Code:  
+for num in range(8,90,3):  
+print(num,end=',') 
+Input and Output:  
+Output: 8 ,11 ,14 ,17 ,20 ,23 ,26 ,29 ,32 ,35 ,38 ,41 ,44 ,47 ,50 ,53 ,56 ,59 ,62 ,65 ,68 ,71 ,74 
+,77 ,80 ,83 ,86 ,89 ,  
+Result: Numbers are correctly printed from 8 to 89 with step 3. 
+Experiment 1.3: 
+Aim: Split a string into array of characters in Python.  
+Descrip on: Splits a string into individual characters, including spaces, and stores them in a 
+list.  
+Procedure:  
+1. Start the program.  
+2. Define the input string.  
+3. Use list() to convert the string into a list.  
+4. Print the list.  
+5. End the program.  
+Source Code:  
+input_string = "python programming is very very string"  
+char_array = list(input_string)  
+print("Array of characters:", char_array)  
+Input and Output:  
+Output: 
+['p','y','t','h','o','n',' ','p','r','o','g','r','a','m','m','i','n','g',' ','i','s',' ','v','e','r','y',' ','v','e','r','y',' 
+','s','t','r','i','n','g']  
+Result: The string is successfully split into characters. 
+Experiment 1.4: 
+Aim: Write a Python program to get the largest number from a list.  
+Descrip on: Uses max() to find the largest number from a user-defined list. 
+Procedure:  
+1. Start the program.  
+2. Take list input from the user.  
+3. Use max() to find the largest number.  
+4. Print the result.  
+5. End the program.  
+Source Code:  
+numbers = eval(input("Enter list: "))  
+largest = max(numbers)  
+print("The largest number in the list:", largest)  
+Input and Output:  
+Input: [34,67,36,2]  
+Output: The largest number in the list: 67  
+Result: The program correctly iden fies the largest number. 
+Experiment 1.5: 
+Aim: Write a python program to find nth Fibonacci number. 
+Descrip on:  
+Calculates the nth Fibonacci number using a func on. Handles input valida on and returns 
+correct Fibonacci sequence values.  
+Procedure: 
+1. Start the program.  
+2. Define func on on fibonacci(n) that: returns error if n<=0, returns 0 for n=1, returns 1 for 
+n=2, uses loop for n>2.  
+3. Take user input for n.  
+4. Call the func on and display result.  
+5. End the program.  
+Source Code:  
+def fibonacci(n): 
+    if n <= 0:  
+         return "Invalid input"  
+    elif n == 1 or n == 2: 
+          return n-1  
+     else:  
+           a,b = 0,1  
+            for _ in range(n-2): 
+     a,b = b,a+b  
+return b  
+n = int(input("Enter the posi on (n) to find nth Fibonacci number: "))  
+print(f"The {n}th Fibonacci number is:", fibonacci(n))  
+Input and Output:  
+Input: 4  
+Output: The 4th Fibonacci number is: 2  
+Result: The program correctly calculates the nth Fibonacci number.
