@@ -1,0 +1,121 @@
+UNIT – 2 
+Experiment 2.1: 
+Aim: Write a Python program that defines a Car class with a ributes like make, model, and 
+year, and methods like start() and stop().  
+Descrip on: Demonstrates object-oriented programming by crea ng a Car class with 
+a ributes and methods to simulate star ng and stopping.  
+Procedure:  
+1. Start the program.  
+2. Define Car class with a ributes make, model, year.  
+3. Define start() and stop() methods.  
+4. Create object with specific values.  
+5. Call methods.  
+6. End the program.  
+Source Code:  
+class Car:  
+    def __init__(self, make, model, year):  
+         self.make = make  
+         self.model = model  
+         self.year = year  
+   def start(self):  
+         print(f"{self.make} {self.model} is star ng.")  
+   def stop(self): print(f"{self.make} {self.model} is stopping.")  
+my_car = Car("Toyota","Corolla",2020)  
+my_car.start()  
+my_car.stop()  
+Input and Output:  
+Input: None  
+Output: Toyota Corolla is star ng. Toyota Corolla is stopping.  
+Result: Class and method execu on demonstrated correctly. 
+Experiment 2.2: 
+Aim: Write a Python program that demonstrates inheritance by crea ng a base class Animal 
+and derived classes like Dog, Cat, etc., each with their specific behaviors 
+Descrip on:  
+Derived classes inherit a ributes and methods from a base class and can override them. 
+Procedure / Logic:  
+1. Start the program.  
+2. Define base class Animal with speak().  
+3. Define derived classes Dog, Cat and override speak().  
+4. Create objects and call methods.  
+5. End the program. 
+Source Code: 
+class Animal:  
+def speak(self):  
+print("Animal makes a sound")  
+class Dog(Animal):  
+def speak(self):  
+print("Dog barks")  
+class Cat(Animal):  
+def speak(self):  
+print("Cat meows")  
+dog = Dog()  
+cat = Cat()  
+dog.speak()  
+cat.speak() 
+Input and Output:  
+Input: None  
+Output:  
+Dog barks  
+Cat meows 
+Result: Inheritance and method overriding demonstrated. 
+Experiment 2.3: 
+Aim: Define a base class called Animal with a method make_sound(). Implement derived 
+classes Dog, Cat, Bird that override make_sound() to produce different sounds.  
+Descrip on: Calling the same method on objects of different classes produces different 
+outputs.  
+Procedure:  
+1. Start program.  
+2. Define base class Animal with make_sound().  
+3. Define derived classes Dog, Cat, Bird overriding method.  
+4. Create objects.  
+5. Call method on each object.  
+6. End program.  
+Source Code:  
+class Animal:  
+     def make_sound(self):  
+          print("Some sound")  
+class Dog(Animal):  
+     def make_sound(self):  
+          print("Bark")  
+class Cat(Animal):  
+     def make_sound(self):  
+          print("Meow")  
+class Bird(Animal):  
+    def make_sound(self):  
+         print("Chirp")  
+animals=[Dog(),Cat(),Bird()]  
+for animal in animals:  
+    animal.make_sound()  
+  
+Input and Output:  
+Input: None  
+Output:  
+Bark  
+Meow  
+Chirp  
+Result: Polymorphism demonstrated correctly. 
+Program 2.4: 
+Aim: Write a Python program that demonstrates error handling using try-except block to 
+handle division by zero.  
+Descrip on: Prevents runme errors using try-except block.  
+Procedure:  
+1. Start program.  
+2. Prompt user for numerator and denominator.  
+3. Use try to perform division.  
+4. Use except to catch ZeroDivisionError.  
+5. Display result if valid.  
+6. End program.  
+Source Code:  
+try:  
+num1=int(input("Enter numerator: "))  
+num2=int(input("Enter denominator: "))  
+result=num1/num2  
+print("Result:",result)  
+except ZeroDivisionError:  
+print("Error: Division by zero is not allowed.")  
+Input and Output:  
+Input:  
+Enter numerator:10  
+Enter denominator:0  
+Output: Error: Division by zero is not allowed.  
+Result: Program handles division by zero successfully
